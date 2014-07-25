@@ -51,6 +51,21 @@
     self.count += 1;
     NSLog(@"%d", self.count);
     self.textView.text = [NSString stringWithFormat:@"%d", self.count];
+
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration
+                                                      defaultSessionConfiguration];
+    NSURLSession *delegateFreeSession = [NSURLSession sessionWithConfiguration:
+                                         defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    [[delegateFreeSession dataTaskWithURL: [NSURL URLWithString:
+                                            @"http://www.example.com/"]
+                        completionHandler:^(NSData *data, NSURLResponse *response,
+                                            NSError *error) {
+                            NSLog(@"Got response %@ with error %@.\n", response,
+                                  error);
+                            NSLog(@"DATA:\n%@\nEND DATA\n",
+                                  [[NSString alloc] initWithData: data
+                                                        encoding: NSUTF8StringEncoding]);
+                        }] resume];
 }
 
 @end
