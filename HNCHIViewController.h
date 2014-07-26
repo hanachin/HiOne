@@ -15,5 +15,7 @@
 @property (atomic) int count;
 
 - (IBAction)hi:(id)sender;
+- (IBAction)unwindToTop:(UIStoryboardSegue *)segue;
+- (IBAction)unwindToTopSettingDone:(UIStoryboardSegue *)segue;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "HNCHIViewController.h"
+#import "HNCHiSettingViewController.h"
 
 @interface HNCHIViewController ()
 
@@ -72,6 +73,14 @@
                                   [[NSString alloc] initWithData: data
                                                         encoding: NSUTF8StringEncoding]);
                         }] resume];
+}
+
+- (IBAction)unwindToTop:(UIStoryboardSegue *)segue
+{
+}
+
+- (IBAction)unwindToTopSettingDone:(UIStoryboardSegue *)segue
+{
 }
 
 @end
