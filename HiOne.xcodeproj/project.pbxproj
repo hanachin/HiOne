@@ -14,6 +14,7 @@
 		B263009C1982CEE7003703BF /* Hi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B263009B1982CEE7003703BF /* Hi.storyboard */; };
 		B26300A01982D0F7003703BF /* HNCHIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B263009E1982D0F7003703BF /* HNCHIViewController.m */; };
 		B26300A11982D0F7003703BF /* HNCHIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B263009F1982D0F7003703BF /* HNCHIViewController.xib */; };
+		B26300A41982D802003703BF /* HNCCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = B26300A31982D802003703BF /* HNCCredential.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		B263009D1982D0F7003703BF /* HNCHIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNCHIViewController.h; sourceTree = "<group>"; };
 		B263009E1982D0F7003703BF /* HNCHIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNCHIViewController.m; sourceTree = "<group>"; };
 		B263009F1982D0F7003703BF /* HNCHIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HNCHIViewController.xib; sourceTree = "<group>"; };
+		B26300A21982D802003703BF /* HNCCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNCCredential.h; sourceTree = "<group>"; };
+		B26300A31982D802003703BF /* HNCCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNCCredential.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				B263009B1982CEE7003703BF /* Hi.storyboard */,
 				B263009D1982D0F7003703BF /* HNCHIViewController.h */,
 				B263009E1982D0F7003703BF /* HNCHIViewController.m */,
+				B26300A21982D802003703BF /* HNCCredential.h */,
+				B26300A31982D802003703BF /* HNCCredential.m */,
 				B263009F1982D0F7003703BF /* HNCHIViewController.xib */,
 				B263007D1982CEB0003703BF /* HiOne */,
 				B263008E1982CEB0003703BF /* HiOneTests */,
@@ -219,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B26300841982CEB0003703BF /* AppDelegate.m in Sources */,
+				B26300A41982D802003703BF /* HNCCredential.m in Sources */,
 				B26300A01982D0F7003703BF /* HNCHIViewController.m in Sources */,
 				B26300811982CEB0003703BF /* main.m in Sources */,
 			);

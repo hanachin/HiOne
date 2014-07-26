@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HNCCredential.h"
 
 @interface HNCHIViewController : UIViewController
 

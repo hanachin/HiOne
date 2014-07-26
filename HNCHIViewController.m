@@ -46,20 +46,26 @@
 }
 */
 
+- (HNCCredential *)credential
+{
+    return [[HNCCredential alloc] init];
+}
+
 - (IBAction)hi:(id)sender
 {
     self.count += 1;
-    NSLog(@"%d", self.count);
     self.textView.text = [NSString stringWithFormat:@"%d", self.count];
-
-    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration
-                                                      defaultSessionConfiguration];
+    
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    defaultConfigObject.HTTPAdditionalHeaders = @{
+                                                  @"Authorization": [NSString stringWithFormat:@"Basic %@", [[self credential] base64]],
+                                                  };
     NSURLSession *delegateFreeSession = [NSURLSession sessionWithConfiguration:
                                          defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
-    [[delegateFreeSession dataTaskWithURL: [NSURL URLWithString:
-                                            @"http://www.example.com/"]
-                        completionHandler:^(NSData *data, NSURLResponse *response,
-                                            NSError *error) {
+    NSURL *url = [NSURL URLWithString:
+                  @"https://idobata.io/api/seed"];
+    [[delegateFreeSession dataTaskWithURL: url
+                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                             NSLog(@"Got response %@ with error %@.\n", response,
                                   error);
                             NSLog(@"DATA:\n%@\nEND DATA\n",
